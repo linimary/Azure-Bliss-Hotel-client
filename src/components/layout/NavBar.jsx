@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import NavLink from "react-bootstrap/NavLink";
+import { Link, NavLink } from "react-router-dom";
+// import NavLink from "react-bootstrap/NavLink";
 
 const NavBar = () => {
   const [showAccount, setShowAccount] = useState(false);
