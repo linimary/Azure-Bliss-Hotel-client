@@ -1,6 +1,6 @@
 body {
   min-height: 100vh;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
 }
 
 .card {
@@ -92,7 +92,7 @@ body {
 
 
 .parallax {
-  background-image: url("./assets/images/parrall.jpg");
+  background-image: url("./assets/images/pexels-scott-webb-1029601.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -104,7 +104,7 @@ body {
   position: relative;
   height: 150px;
   background-size: cover;
-  background-image: url("./assets/images/services4.jpg");
+  background-image: url("./assets/images/pexels-igor-starkov-756076.jpg");
   background-position: center center;
 }
 
@@ -211,7 +211,7 @@ h2 {
 
 /* The header banner */
 .header-banner {
-  background-image: url("./assets/images/services-1.jpg");
+  background-image: url("./assets/images/pexels-pixabay-326787.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
@@ -236,7 +236,7 @@ h2 {
 }
 
 .footer {
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
