@@ -29,10 +29,12 @@ const BookingSummary = ({ booking, payment, isFormValid, onConfirm }) => {
   }, [isBookingConfirmed, navigate]);
 
   return (
+    // <div className="row"></div>
+    // <div className="col-md-6"></div>
     <div className="card card-body mt-5">
-      <h4>Reservation Summary</h4>
+      <h4 className="card-title hotel-color">Reservation Summary</h4>
       <p>
-        FullName : <strong>{booking.guestName}</strong>
+        Name : <strong>{booking.guestFullName}</strong>
       </p>
       <p>
         Email : <strong>{booking.guestEmail}</strong>
@@ -49,7 +51,7 @@ const BookingSummary = ({ booking, payment, isFormValid, onConfirm }) => {
         Number of Days Booked : <strong>{numOfDays}</strong>
       </p>
       <div>
-        <h5>Number of Guests</h5>
+        <h5 className="hotel-color">Number of Guests</h5>
         <strong>
           Adult{booking.numOfAdults > 1 ? "s" : ""} : {booking.numOfAdults}
         </strong>
