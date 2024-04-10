@@ -11,6 +11,7 @@ import Footer from "./components/layout/Footer.jsx";
 import RoomListing from "./components/room/RoomListing.jsx";
 import Admin from "./components/admin/Admin.jsx";
 import Checkout from "./components/bookings/Checkout.jsx"
+import BookingSuccess from "./components/bookings/BookingSuccess.jsx"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="/book-room/:roomId" element={<Checkout />} />
             <Route path="/browse-all-rooms" element={<RoomListing />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/booking-success" element={<BookingSuccess />} />
           </Routes>
         </Router>
         <Footer />

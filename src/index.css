@@ -26,7 +26,8 @@ body {
   left: 0;
   right: 0;
   content: '';
-  background-color: rgb(169, 77, 123);
+  background-color: rgb(230, 126, 42);
+  /* background-color: rgb(169, 77, 123); */
   width: 0;
   margin: 0 auto;
   height: 4px;
@@ -61,8 +62,20 @@ body {
 
 /* Hotel custom color */
 .btn-hotel {
-  background-color: rgb(169, 77, 123);
+  background-color: rgb(230, 126, 42);
+  /* background-color: rgb(169, 77, 123); */
   color: #fff;
+}
+
+/* Overwritten custom bootstrap btn - book now */
+.btn-outline-secondary {
+  color: rgb(115, 175, 152);
+  border-color: rgb(115, 175, 152);
+}
+
+.btn-outline-secondary:hover {
+  background-color: rgb(115, 175, 152);
+  border-color: rgb(115, 175, 152);
 }
 
 .btn-hotel:hover {
@@ -75,7 +88,8 @@ body {
 }
 
 .hotel-color {
-  color: rgb(169, 77, 123);
+  color: rgb(230, 126, 42);
+  /* color: rgb(169, 77, 123); */
 }
 
 .room-price {
@@ -92,7 +106,16 @@ body {
 
 
 .parallax {
-  background-image: url("./assets/images/pexels-scott-webb-1029601.jpg");
+  background-image: url("./assets/images/pexels-đức-trung-đào-17748656.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.parallax2 {
+  background-image: url("./assets/images/pexels-zak-chapman-2290753.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -104,7 +127,7 @@ body {
   position: relative;
   height: 150px;
   background-size: cover;
-  background-image: url("./assets/images/pexels-igor-starkov-756076.jpg");
+  background-image: url("./assets/images/pexels-cottonbro-studio-6466482.jpg");
   background-position: center center;
 }
 
@@ -211,7 +234,7 @@ h2 {
 
 /* The header banner */
 .header-banner {
-  background-image: url("./assets/images/pexels-pixabay-326787.jpg");
+  background-image: url("./assets/images/pexels-johannes-plenio-1227807.jpg");
   background-size: cover;
   background-position: center;
   position: relative;

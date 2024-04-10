@@ -17,9 +17,9 @@ const HotelService = () => {
       <Container className="mb-2">
         <Header title={"Our Sevices"} />
         <Row>
-          <h4 className="text-center">
+          <h4 className="text-center mt-2">
             Services at <span className="hotel-color">Azure Bliss - </span>{" "}
-            Hotel
+            Hotel {" "}
             <span className="gap-2">
               <FaClock /> - 24-Hour Front Desk
             </span>
@@ -31,8 +31,8 @@ const HotelService = () => {
             <Card>
               <Card.Body>
                 <Card.Title className="hotel-color">
-                  <FaWifi />
-                  WiFi
+                  <FaWifi size={17} />
+                  {" "} WiFi
                 </Card.Title>
                 <Card.Text>
                   Stay connected with high-speed internet access.
@@ -46,7 +46,7 @@ const HotelService = () => {
               <Card.Body>
                 <Card.Title className="hotel-color">
                   <FaUtensils />
-                  Breakfast
+                  {" "} Breakfast
                 </Card.Title>
                 <Card.Text>
                   Start your day with a delicious breakfast buffet.
@@ -60,7 +60,7 @@ const HotelService = () => {
               <Card.Body>
                 <Card.Title className="hotel-color">
                   <FaTshirt />
-                  Laundry
+                  {" "} Laundry
                 </Card.Title>
                 <Card.Text>
                   Keep your clothes clean and fresh with our laundry service.
@@ -74,7 +74,7 @@ const HotelService = () => {
               <Card.Body>
                 <Card.Title className="hotel-color">
                   <FaCocktail />
-                  Mini-Bar
+                  {" "} Mini-Bar
                 </Card.Title>
                 <Card.Text>
                   Enjoy a refreshing drink or snack from our in-room mini-bar.
@@ -88,7 +88,7 @@ const HotelService = () => {
               <Card.Body>
                 <Card.Title className="hotel-color">
                   <FaParking />
-                  Parking
+                  {" "} Parking
                 </Card.Title>
                 <Card.Text>
                   Park your car conveniently in our on-site parking lot.
@@ -102,7 +102,7 @@ const HotelService = () => {
               <Card.Body>
                 <Card.Title className="hotel-color">
                   <FaSnowflake />
-                  Air conditioning
+                  {" "} Air conditioning
                 </Card.Title>
                 <Card.Text>
                   Stay cool and comfortable with our air conditioning system.

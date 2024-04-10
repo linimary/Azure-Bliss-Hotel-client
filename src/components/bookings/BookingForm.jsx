@@ -11,7 +11,7 @@ const BookingForm = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [roomPrice, setRoomPrice] = useState(0);
   const [booking, setBooking] = useState({
-    guestName: "",
+    guestFullName: "",
     guestEmail: "",
     checkInDate: "",
     checkOutDate: "",
@@ -96,10 +96,10 @@ const BookingForm = () => {
     try {
       const confirmationCode = await bookRoom(roomId, booking);
       setIsSubmitted(true);
-      navigate("/", { state: { message: confirmationCode } });
+      navigate("/booking-success", { state: { message: confirmationCode } });
     } catch (error) {
       setErrorMessage(error.message);
-      navigate("/", { state: { error: errorMessage } });
+      navigate("/booking-success", { state: { error: errorMessage } });
     }
   };
 
@@ -112,14 +112,14 @@ const BookingForm = () => {
               <h4>Reserve Room</h4>
               <Form noValidate validated={isValidated} onSubmit={handleSubmit}>
                 <Form.Group>
-                  <Form.Label htmlFor="guestName">Full Name : </Form.Label>
+                  <Form.Label htmlFor="guestFullName">Fullname : </Form.Label>
                   <Form.Control
                     required
                     type="text"
-                    id="guestName"
-                    name="guestName"
-                    value={booking.guestName}
-                    placeholder="Enter your full name"
+                    id="guestFullName"
+                    name="guestFullName"
+                    value={booking.guestFullName}
+                    placeholder="Enter your fullname"
                     onChange={handleInputChange}
                   />
                   <Form.Control.Feedback type="invalid">
