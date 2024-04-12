@@ -11,9 +11,9 @@ This project is aimed at providing a comprehensive solution for managing hotel o
 - Room Management: Admins can add new rooms, update existing room details, and deactivate rooms as needed.
 - Responsive UI: The frontend is built with React, providing a responsive and user-friendly experience across devices.
 ## Technologies Used
-- Spring Boot: Backend framework for developing Java-based applications.
-- Spring Security: Provides authentication, authorization, and other security features for Spring applications.
-- MySQL: Relational database management system for storing and managing data.
-- React: JavaScript library for building user interfaces.
-- Bootstrap: Frontend framework for creating responsive and mobile-first websites.
+- Spring Boot
+- Spring Security
+- MySQL
+- React
+- Bootstrap
 
