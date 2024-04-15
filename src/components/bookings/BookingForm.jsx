@@ -10,9 +10,12 @@ const BookingForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [roomPrice, setRoomPrice] = useState(0);
+
+  const currentUser = localStorage.getItem("userId");
+
   const [booking, setBooking] = useState({
     guestFullName: "",
-    guestEmail: "",
+    guestEmail: currentUser,
     checkInDate: "",
     checkOutDate: "",
     numOfAdults: "",
@@ -112,7 +115,9 @@ const BookingForm = () => {
               <h4>Reserve Room</h4>
               <Form noValidate validated={isValidated} onSubmit={handleSubmit}>
                 <Form.Group>
-                  <Form.Label htmlFor="guestFullName" className="hotel-color">Fullname : </Form.Label>
+                  <Form.Label htmlFor="guestFullName" className="hotel-color">
+                    Fullname :{" "}
+                  </Form.Label>
                   <Form.Control
                     required
                     type="text"
@@ -128,7 +133,9 @@ const BookingForm = () => {
                 </Form.Group>
 
                 <Form.Group>
-                  <Form.Label htmlFor="guestEmail" className="hotel-color">Email : </Form.Label>
+                  <Form.Label htmlFor="guestEmail" className="hotel-color">
+                    Email :{" "}
+                  </Form.Label>
                   <Form.Control
                     required
                     type="email"
@@ -164,7 +171,10 @@ const BookingForm = () => {
                       </Form.Control.Feedback>
                     </div>
                     <div className="col-6">
-                      <Form.Label htmlFor="checkOutDate" className="hotel-color">
+                      <Form.Label
+                        htmlFor="checkOutDate"
+                        className="hotel-color"
+                      >
                         Check-In Date :{" "}
                       </Form.Label>
                       <Form.Control
@@ -191,7 +201,9 @@ const BookingForm = () => {
                   <legend>Number of Guests: </legend>
                   <div className="row">
                     <div className="col-6">
-                      <Form.Label htmlFor="numOfAdults" className="hotel-color">Adults : </Form.Label>
+                      <Form.Label htmlFor="numOfAdults" className="hotel-color">
+                        Adults :{" "}
+                      </Form.Label>
                       <Form.Control
                         required
                         type="number"
@@ -207,7 +219,10 @@ const BookingForm = () => {
                       </Form.Control.Feedback>
                     </div>
                     <div className="col-6">
-                      <Form.Label htmlFor="numOfChildren" className="hotel-color">
+                      <Form.Label
+                        htmlFor="numOfChildren"
+                        className="hotel-color"
+                      >
                         Children :{" "}
                       </Form.Label>
                       <Form.Control
