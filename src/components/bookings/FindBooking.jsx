@@ -86,9 +86,9 @@ const FindBooking = () => {
   return (
     <>
       <div className="container mt-5 d-flex flex-column justify-content-center align-items-center">
-        <h2>Find My Booking</h2>
+        <h2 className="mb-4">Find My Booking</h2>
         <form onSubmit={handleFormSubmit} className="col-md-6">
-          <div className="input-gorup mb-3">
+          <div className="input-group mb-3">
             <input
               className="form-control"
               type="text"
@@ -135,7 +135,7 @@ const FindBooking = () => {
             )}
           </div>
         ) : (
-          <div>Find booking...</div>
+          <div className="container"  style={{ minHeight: "calc(100vh - 100px)"}}></div>
         )}
 
         {isDeleted && (

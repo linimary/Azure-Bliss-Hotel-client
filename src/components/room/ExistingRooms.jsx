@@ -100,7 +100,7 @@ const ExistingRooms = () => {
         <p>Loading existing rooms...</p>
       ) : (
         <>
-          <section className="mt-5 mb-5 container">
+          <section className="mt-5 mb-5 container" style={{ height: "100vh" }}>
             <div className="d-flex justify-content-between mb-3 mt-5">
               <h2>Existing rooms</h2>
             </div>
@@ -108,9 +108,9 @@ const ExistingRooms = () => {
               <Col md={6} className="mb-3 mb-md-0">
                 <RoomFilter data={rooms} setFilteredData={setFilteredRooms} />
               </Col>
-              <Col md={6} className="d-flex justify-content-end">
-                <Link to={"/add-room"}>
-                  <FaPlus /> Add Room
+               <Col md={6} className="d-flex justify-content-end mb-4">
+                <Link to={"/add-room"} className="btn btn-secondary btn-sm">
+                  <FaPlus className="me-1" /> Add Room
                 </Link>
               </Col>
             </Row>
@@ -131,15 +131,15 @@ const ExistingRooms = () => {
                     <td>{room.roomPrice}</td>
                     <td className="gap-2">
                       <Link to={`/edit-room/${room.id}`}>
-                        <span className="btn btn-info btn-sm">
+                        <span className="btn btn-info btn-sm me-1">
                           <FaEye />
                         </span>
-                        <span className="btn btn-warning btn-sm">
+                        <span className="btn btn-warning btn-sm me-1">
                           <FaEdit />
                         </span>
                       </Link>
                       <button
-                        className="btn btn-danger btn-sm"
+                        className="btn btn-danger btn-sm me-1"
                         onClick={() => handleDelete(room.id)}
                       >
                         <FaTrashAlt />

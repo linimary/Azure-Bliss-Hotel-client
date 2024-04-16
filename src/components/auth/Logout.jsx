@@ -16,7 +16,7 @@ const Logout = () => {
   const isLoggedIn = auth.user !== null;
 
   return isLoggedIn ? (
-    <>
+    <ul className="list-unstyled">
       <li>
         <Link className="dropdown-item" to={"/profile"}>
           Profile
@@ -28,7 +28,7 @@ const Logout = () => {
       <button className="dropdown-item" onClick={handleLogout}>
         Logout
       </button>
-    </>
+    </ul>
   ) : null;
 };
 

@@ -8,7 +8,7 @@ const BookingSuccess = () => {
   const error = location.state?.error;
 
   return (
-    <div className="container">
+    <div className="container" style={{ height: "100vh"}}>
       <Header title="Booking Success" />
       <div className="mt-5">
         {message ? (

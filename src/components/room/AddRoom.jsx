@@ -65,7 +65,7 @@ const AddRoom = () => {
 
   return (
     <>
-      <section className="container mt-5 mb-5">
+      <section className="container mt-5 mb-5" style={{ minHeight: "100vh" }}>
         <div className="row justify-content-center">
           <div className="col-md-8 col-lg-6">
             <h2 className="mt-5 mb-2">Add a new room</h2>
@@ -133,11 +133,11 @@ const AddRoom = () => {
               </div>
 
               <div className="d-grid d-md-flex mt-2">
-                <Link to={"/existing-rooms"} className="btn btn-outline-info">
+                <Link to={"/existing-rooms"} className="btn btn-secondary me-2">
                   Back
                 </Link>
-                <button className="btn btn-outline-primary ml-5">
-                  Save Room
+                <button className="btn btn-hotel ml-5">
+                  Save
                 </button>
               </div>
             </form>

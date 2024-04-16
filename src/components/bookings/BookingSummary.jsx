@@ -52,7 +52,7 @@ const BookingSummary = ({ booking, payment, isFormValid, onConfirm }) => {
       </p>
       <div>
         <h5 className="hotel-color">Number of Guests</h5>
-        <strong>
+        <strong style={{ paddingRight: "10px" }}>
           Adult{booking.numOfAdults > 1 ? "s" : ""} : {booking.numOfAdults}
         </strong>
         <strong>Children : {booking.numOfChildren}</strong>

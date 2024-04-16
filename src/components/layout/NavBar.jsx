@@ -1,19 +1,19 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logout from "../auth/Logout";
-import { AuthContext } from "../auth/AuthProvider";
+// import { AuthContext } from "../auth/AuthProvider";
 
 const NavBar = () => {
   const [showAccount, setShowAccount] = useState(false);
 
-  const { user } = useContext(AuthContext);
+  // const { user } = useContext(AuthContext);
 
   const handleAccountClick = () => {
     setShowAccount(!showAccount);
   };
 
-  const isLoggedIn = localStorage.getItem("token")
-	const userRole = localStorage.getItem("userRole")
+  const isLoggedIn = localStorage.getItem("token");
+  const userRole = localStorage.getItem("userRole");
 
   // const isLoggedIn = user !== null;
   // const userRole = localStorage.getItem("userRole");
@@ -50,7 +50,7 @@ const NavBar = () => {
             {isLoggedIn && userRole === "ROLE_ADMIN" && (
               <li className="nav-item">
                 <NavLink className="nav-link" aria-current="page" to={"/admin"}>
-                  Admin
+                  Manage Rooms
                 </NavLink>
               </li>
             )}
@@ -77,20 +77,29 @@ const NavBar = () => {
                 {" "}
                 Account
               </a>
-
-              <ul
-                className={`dropdown-menu ${showAccount ? "show" : ""}`}
-                aria-labelledby="navbarDropdown"
-              >
-                {!isLoggedIn ? (
-                    <Logout />
-                ) : (
+              <ul className={`dropdown-menu ${showAccount ? "show" : ""}`}>
+              {isLoggedIn ? (
+									<Logout />
+								) : (
+									<li>
+										<Link className="dropdown-item" to={"/login"}>
+											Login
+										</Link>
+									</li>
+								)}
+                
+                {/* {!isLoggedIn ? (
                   <li>
                     <Link to={"/login"} className="dropdown-item">
                       Login
                     </Link>
                   </li>
-                )}
+                ) : (
+                  <li>
+                    <Logout />
+                  </li>
+                )} */}
+
               </ul>
             </li>
           </ul>

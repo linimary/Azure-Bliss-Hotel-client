@@ -33,9 +33,7 @@ const RoomCarousel = () => {
 
   return (
     <section className="bg-light mb-5 mt-5 shadow">
-      <Link to={"/browse-all-rooms"} className="hotel-color text-center">
-        Browse all rooms
-      </Link>
+      
       <Container>
         <Carousel indicators={false}>
           {[...Array(Math.ceil(rooms.length / 4))].map((_, index) => (
@@ -76,6 +74,16 @@ const RoomCarousel = () => {
             </Carousel.Item>
           ))}
         </Carousel>
+        <div className="d-grid gap-2">
+        <button className="btn mb-1">
+          <Link
+            to={"/browse-all-rooms"}
+            className="text-center text-muted text-decoration-none"
+          >
+            Browse all rooms
+          </Link>
+        </button>
+      </div>
       </Container>
     </section>
   );

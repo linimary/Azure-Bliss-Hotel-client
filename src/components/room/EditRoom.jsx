@@ -62,7 +62,7 @@ const EditRoom = () => {
 
   return (
     <>
-      <section className="container mt-5 mb-5">
+      <section className="container mt-5 mb-5" style={{ minHeight: "100vh" }}>
         <h3 className="text-center mt-5 mb-2">Edit room</h3>
         
         <div className="row justify-content-center">
@@ -132,11 +132,11 @@ const EditRoom = () => {
               </div>
 
               <div className="d-grid gap-2 d-md-flex mt-2">
-                <Link to={"/existing-rooms"} className="btn btn-outline-info ml-5">
+                <Link to={"/existing-rooms"} className="btn btn-secondary ml-5">
                 Back
                 </Link>
-                <button type="submit" className="btn btn-outline-warning">
-                  Edit Room
+                <button type="submit" className="btn btn-hotel">
+                  Edit
                 </button>
               </div>
             </form>

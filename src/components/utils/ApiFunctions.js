@@ -20,7 +20,7 @@ export async function addRoom(photo, roomType, roomPrice) {
   formData.append("roomPrice", roomPrice);
 
   const response = await api.post("/rooms/add/new-room", formData, {
-    headers: getHeader()
+    headers: getHeader(),
   });
 
   if (response.status === 201) {
@@ -54,9 +54,9 @@ export async function getAllRooms() {
 export async function deleteRoom(roomId) {
   try {
     const result = await api.delete(`/rooms/delete/room/${roomId}`, {
-      headers: getHeader()
+      headers: getHeader(),
     });
-    
+
     return result.data;
   } catch (error) {
     throw new Error(`Error deleting room ${error.message}`);
@@ -70,7 +70,9 @@ export async function updateRoom(roomId, roomData) {
   formData.append("roomPrice", roomData.roomPrice);
   formData.append("photo", roomData.photo);
 
-  const response = await api.put(`/rooms/update/${roomId}`, formData);
+  const response = await api.put(`/rooms/update/${roomId}`, formData, {
+    headers: getHeader(),
+  });
 
   return response;
 }
@@ -105,7 +107,9 @@ export async function bookRoom(roomId, booking) {
 // This function gets all bookings from the database
 export async function getAllBookings() {
   try {
-    const result = await api.get("/bookings/all-bookings");
+    const result = await api.get("/bookings/all-bookings", {
+      headers: getHeader(),
+    });
     return result.data;
   } catch (error) {
     throw new Error(`Error fetching bookings: ${error.message}`);
@@ -145,6 +149,7 @@ export async function getAvailableRooms(checkInDate, checkOutDate, roomType) {
   return result;
 }
 
+// This function registers a new user
 export async function registerUser(registration) {
   try {
     const response = await api.post("/auth/register-user", registration);
@@ -158,6 +163,7 @@ export async function registerUser(registration) {
   }
 }
 
+// This function logins a registered user
 export async function loginUser(login) {
   try {
     const response = await api.post("/auth/login", login);
@@ -173,6 +179,7 @@ export async function loginUser(login) {
   }
 }
 
+// This function gets the user profile
 export async function getUserProfile(userId, token) {
   try {
     const response = await api.get(`/users/profile/${userId}`, {
@@ -185,6 +192,7 @@ export async function getUserProfile(userId, token) {
   }
 }
 
+// This function deletes a user
 export async function deleteUser(userId) {
   try {
     const response = await api.delete(`/users/delete/${userId}`, {
@@ -197,6 +205,7 @@ export async function deleteUser(userId) {
   }
 }
 
+// This function gets a single user
 export async function getUser(userId, token) {
   try {
     const response = await api.get(`/users/${userId}`, {
@@ -206,5 +215,19 @@ export async function getUser(userId, token) {
     return response.data;
   } catch (error) {
     throw error;
+  }
+}
+
+// This function gets user bookings by the user id
+export async function getBookingsByUserId(userId, token) {
+  try {
+    const response = await api.get(`/bookings/user/${userId}/bookings`, {
+      headers: getHeader(),
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching bookings: ", error.message);
+    throw new Error("Failed to fetch bookings");
   }
 }

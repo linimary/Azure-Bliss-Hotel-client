@@ -22,11 +22,11 @@ const BookingForm = () => {
     numOfChildren: "",
   });
 
-  const [roomInfo, setRoomInfo] = useState({
-    photo: "",
-    roomType: "",
-    roomPrice: "",
-  });
+  // const [roomInfo, setRoomInfo] = useState({
+  //   photo: "",
+  //   roomType: "",
+  //   roomPrice: "",
+  // });
 
   const { roomId } = useParams();
 
@@ -151,7 +151,7 @@ const BookingForm = () => {
                 </Form.Group>
 
                 <fieldset style={{ border: "2px" }}>
-                  <legend>Lodging period</legend>
+                  <legend className="mt-2">Lodging period</legend>
                   <div className="row">
                     <div className="col-6">
                       <Form.Label htmlFor="checkInDate" className="hotel-color">
@@ -164,6 +164,7 @@ const BookingForm = () => {
                         name="checkInDate"
                         value={booking.checkInDate}
                         placeholder="check-in date"
+                        min={moment().format("MMM Do, YYYY")}
                         onChange={handleInputChange}
                       />
                       <Form.Control.Feedback type="invalid">
@@ -184,6 +185,7 @@ const BookingForm = () => {
                         name="checkOutDate"
                         value={booking.checkOutDate}
                         placeholder="check-out date"
+                        min={moment().format("MMM Do, YYYY")}
                         onChange={handleInputChange}
                       />
                       <Form.Control.Feedback type="invalid">
@@ -197,8 +199,8 @@ const BookingForm = () => {
                     )}
                   </div>
                 </fieldset>
-                <fieldset>
-                  <legend>Number of Guests: </legend>
+                <fieldset style={{ border: "2px" }}>
+                  <legend className="mt-2">Number of Guests: </legend>
                   <div className="row">
                     <div className="col-6">
                       <Form.Label htmlFor="numOfAdults" className="hotel-color">
@@ -232,8 +234,12 @@ const BookingForm = () => {
                         name="numOfChildren"
                         value={booking.numOfChildren}
                         placeholder="0"
+                        min={0}
                         onChange={handleInputChange}
                       />
+                      <Form.Control.Feedback type="invalid">
+												Select 0 if no children
+											</Form.Control.Feedback>
                     </div>
                   </div>
                 </fieldset>

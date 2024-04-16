@@ -41,12 +41,12 @@ const Registration = () => {
   };
 
   return (
-    <section className="container col-6 mt-5 mb-5">
+    <section className="container col-6 mt-5 mb-5" style={{ height: "100vh" }}>
       {errorMessage && <p className="alert alert-danger">{errorMessage}</p>}
       {successMessage && (
         <p className="alert alert-success">{successMessage}</p>
       )}
-      <h2>Register</h2>
+      <h2 className="mb-4">Register</h2>
       <form onSubmit={handleRegistration}>
         <div className="mb-3 row">
           <label htmlFor="firstName" className="col-sm-2 col-form-label">
@@ -120,7 +120,10 @@ const Registration = () => {
             Register
           </button>
           <span style={{ marginLeft: "10px" }}>
-            Already have an account? <Link to={"/login"}>Login</Link>
+            Already have an account?{" "}
+            <Link to={"/login"} style={{ color: "grey" }}>
+              Login
+            </Link>
           </span>
         </div>
       </form>

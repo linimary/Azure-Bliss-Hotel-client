@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { deleteUser, getUser } from "../utils/ApiFunctions";
+import moment from "moment";
+import { deleteUser, getUser, getBookingsByUserId } from "../utils/ApiFunctions";
 
 const Profile = () => {
   const [user, setUser] = useState({
@@ -20,7 +21,7 @@ const Profile = () => {
       bookingConfirmationCode: "",
     },
   ]);
-  
+
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
@@ -94,10 +95,10 @@ const Profile = () => {
                       <img
                         src="https://themindfulaimanifesto.org/wp-content/uploads/2020/09/male-placeholder-image.jpeg"
                         alt="Profile"
-                        className="rounded-circle"
+                        className="rounded-circle mt-3"
                         style={{
-                          width: "150px",
-                          height: "150px",
+                          width: "100px",
+                          height: "100px",
                           objectFit: "cover",
                         }}
                       />

@@ -104,14 +104,16 @@ const RoomSearch = () => {
             <Col xs={12} md={3}>
               <Form.Group>
                 <Form.Label>Room Type</Form.Label>
-                <div className="d-flex">
+                <div className="d-flex align-items-end">
                   <RoomTypeSelector
                     handleRoomInputChange={handleInputChange}
                     newRoom={searchQuery}
                   />
-                  <Button variant="secondary" type="submit">
-                    Search
-                  </Button>
+                  <div className="ms-2">
+                    <Button variant="secondary" type="submit">
+                      Search
+                    </Button>
+                  </div>
                 </div>
               </Form.Group>
             </Col>
