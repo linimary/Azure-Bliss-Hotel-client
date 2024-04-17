@@ -14,7 +14,8 @@ import {
 } from "react-icons/fa";
 
 const Checkout = () => {
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
+  const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [roomInfo, setRoomInfo] = useState({
     photo: "",

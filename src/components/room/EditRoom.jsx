@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { getRoomById, updateRoom } from "../utils/ApiFunctions";
 import { Link, useParams } from "react-router-dom";
 
 const EditRoom = () => {
   const [room, setRoom] = useState({
-    photo: null,
+    photo: "",
     roomType: "",
     roomPrice: "",
   });
@@ -69,13 +68,13 @@ const EditRoom = () => {
           <div className="col-md-8 col-lg-6">
             
             {successMessage && (
-              <div className="alert alert-success fade show">
+              <div className="alert alert-success fade show" role="alert">
                 {successMessage}
               </div>
             )}
 
             {errorMessage && (
-              <div className="alert alert-danger fade show">{errorMessage}</div>
+              <div className="alert alert-danger fade show" role="alert">{errorMessage}</div>
             )}
 
             <form onSubmit={handleSubmit}>
@@ -85,7 +84,6 @@ const EditRoom = () => {
                 </label>
                 <input
                   className="form-control"
-                  required
                   id="roomType"
                   type="text"
                   name="roomType"
@@ -100,7 +98,6 @@ const EditRoom = () => {
                 </label>
                 <input
                   className="form-control"
-                  required
                   id="roomPrice"
                   type="number"
                   name="roomPrice"
@@ -115,6 +112,7 @@ const EditRoom = () => {
                   Room Photo
                 </label>
                 <input
+                  required
                   id="photo"
                   name="photo"
                   type="file"

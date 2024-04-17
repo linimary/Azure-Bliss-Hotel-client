@@ -7,7 +7,8 @@ import moment from "moment";
 
 const FindBooking = () => {
   const [confirmationCode, setConfirmationCode] = useState("");
-  const [error, setError] = useState("");
+  // const [error, setError] = useState("");
+  const [error, setError] = useState(null);
   const [successMessage, setSuccessMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [bookingInfo, setBookingInfo] = useState({
@@ -51,6 +52,7 @@ const FindBooking = () => {
     try {
       const data = await getBookingByConfirmationCode(confirmationCode);
       setBookingInfo(data);
+      setError(null);
     } catch (error) {
       setBookingInfo(clearBookingInfo);
       if (error.response && error.response.status === 404) {
@@ -72,7 +74,7 @@ const FindBooking = () => {
       setSuccessMessage("Booking has been cancelled successfully!");
       setBookingInfo(clearBookingInfo);
       setConfirmationCode("");
-      setError("");
+      setError(null);
     } catch (error) {
       setError(error.message);
     }
@@ -86,7 +88,7 @@ const FindBooking = () => {
   return (
     <>
       <div className="container mt-5 d-flex flex-column justify-content-center align-items-center">
-        <h2 className="mb-4">Find My Booking</h2>
+        <h2 className="text-center mb-4">Find My Booking</h2>
         <form onSubmit={handleFormSubmit} className="col-md-6">
           <div className="input-group mb-3">
             <input

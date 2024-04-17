@@ -20,7 +20,7 @@ const AddRoom = () => {
 
     if (name === "roomPrice") {
       if (!isNaN(value)) {
-        parseInt(value);
+        value = parseInt(value);
       } else {
         value = "";
       }
@@ -77,9 +77,7 @@ const AddRoom = () => {
             )}
 
             {errorMessage && (
-              <div className="alert alert-danger fade show">
-                {errorMessage}
-              </div>
+              <div className="alert alert-danger fade show">{errorMessage}</div>
             )}
 
             <form onSubmit={handleSubmit}>
@@ -116,6 +114,7 @@ const AddRoom = () => {
                   Room Photo
                 </label>
                 <input
+                  required
                   id="photo"
                   name="photo"
                   type="file"
@@ -136,9 +135,7 @@ const AddRoom = () => {
                 <Link to={"/existing-rooms"} className="btn btn-secondary me-2">
                   Back
                 </Link>
-                <button className="btn btn-hotel ml-5">
-                  Save
-                </button>
+                <button className="btn btn-hotel ml-5">Save</button>
               </div>
             </form>
           </div>

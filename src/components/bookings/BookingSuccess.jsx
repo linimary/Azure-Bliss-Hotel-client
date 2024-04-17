@@ -8,7 +8,7 @@ const BookingSuccess = () => {
   const error = location.state?.error;
 
   return (
-    <div className="container" style={{ height: "100vh"}}>
+    <div className="container" style={{ height: "100vh" }}>
       <Header title="Booking Success" />
       <div className="mt-5">
         {message ? (
@@ -20,9 +20,6 @@ const BookingSuccess = () => {
           <div>
             <h3 className="text-danger">Error Booking Room!</h3>
             <p className="text-danger">{error}</p>
-            {/* <p className="text-danger">
-              {error}Sorry, the room is not available for this period.
-            </p> */}
           </div>
         )}
       </div>

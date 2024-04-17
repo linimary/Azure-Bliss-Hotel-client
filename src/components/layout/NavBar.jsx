@@ -1,21 +1,21 @@
 import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logout from "../auth/Logout";
-// import { AuthContext } from "../auth/AuthProvider";
+import { AuthContext } from "../auth/AuthProvider";
 
 const NavBar = () => {
   const [showAccount, setShowAccount] = useState(false);
 
-  // const { user } = useContext(AuthContext);
+  const { user } = useContext(AuthContext);
 
   const handleAccountClick = () => {
     setShowAccount(!showAccount);
   };
 
-  const isLoggedIn = localStorage.getItem("token");
+  // const isLoggedIn = localStorage.getItem("token");
   const userRole = localStorage.getItem("userRole");
 
-  // const isLoggedIn = user !== null;
+  const isLoggedIn = user !== null;
   // const userRole = localStorage.getItem("userRole");
 
   return (
@@ -77,7 +77,7 @@ const NavBar = () => {
                 {" "}
                 Account
               </a>
-              <ul className={`dropdown-menu ${showAccount ? "show" : ""}`}>
+              <ul className={`dropdown-menu ${showAccount ? "show" : ""}`} aria-labelledby="navbarDropdown">
               {isLoggedIn ? (
 									<Logout />
 								) : (
