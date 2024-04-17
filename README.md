@@ -6,7 +6,7 @@ This project is aimed at providing a comprehensive solution for managing hotel o
 
 ## Features
 
-- **Room Booking**: Guests can browse available rooms, view details, and book rooms for their desired dates.
+- **Room Booking**: Guests can browse available rooms, view details and book rooms for their desired dates.
 
   ![home](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/777962ae-4713-49cc-a218-1adb184feb78)
 
@@ -23,7 +23,7 @@ This project is aimed at providing a comprehensive solution for managing hotel o
   ![find-by-confirmation-code](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/ef77900a-a629-4183-83ce-e15c211f5ac4)
   
 
-- **User Authentication and Authorization**: Utilizing Spring Security, users can securely sign up, log in, and access features based on their roles.
+- **User Authentication and Authorization**: Utilizing Spring Security, users can securely sign up, log in and access features based on their roles.
   
   ![login](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/9fc6f523-4e41-416b-9671-d8a7cfa1a923)
 
@@ -32,12 +32,12 @@ This project is aimed at providing a comprehensive solution for managing hotel o
   ![profile](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/664fb753-227e-464c-a3ab-2e40dc888077)
   
 
-- **Reservation Management**: Administrators have access to a dedicated admin panel to manage reservations, including viewing, editing, and canceling bookings.
+- **Reservation Management**: Administrators have access to a dedicated admin panel to manage reservations, including viewing, editing and canceling bookings.
 
   ![manage-bookings](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/59d7d2d9-1734-4ec8-82f2-604043163779)
   
   
-- **Room Management**: Admins can add new rooms, update existing room details, and deactivate rooms as needed.
+- **Room Management**: Admins can add new rooms, update existing room details and deactivate rooms as needed.
 
   ![add-new-room](https://github.com/linimary/Azure-Bliss-Hotel-server/assets/125043957/5b1adad5-53b7-4f70-95c7-7d3c8aa709a9)
 
